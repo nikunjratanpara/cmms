@@ -2,6 +2,7 @@ package apis
 
 import (
 	"encoding/json"
+	"log"
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
@@ -69,5 +70,6 @@ func (controller TenantController) GetById(w http.ResponseWriter, r *http.Reques
 }
 
 func writeErrorInResponse(w http.ResponseWriter, err error) {
+	log.Fatalln(err)
 	w.Write([]byte(err.Error()))
 }

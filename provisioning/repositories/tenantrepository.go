@@ -4,12 +4,12 @@ import (
 	"context"
 
 	"github.com/google/uuid"
-	"github.com/nikunjratanpara/cmms/internal/infrastructure"
 	"github.com/nikunjratanpara/cmms/provisioning/entities"
+	"github.com/nikunjratanpara/core"
 )
 
 type TenantRepository struct {
-	infrastructure.Repository
+	core.Repository
 }
 
 func NewTenantRepository() *TenantRepository {

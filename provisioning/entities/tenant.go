@@ -2,7 +2,6 @@ package entities
 
 import (
 	"github.com/google/uuid"
-	"github.com/nikunjratanpara/cmms/internal/contract"
 )
 
 type Tenant struct {

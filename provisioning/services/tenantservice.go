@@ -4,9 +4,9 @@ import (
 	"time"
 
 	"github.com/google/uuid"
-	"github.com/nikunjratanpara/cmms/internal/contract"
 	"github.com/nikunjratanpara/cmms/provisioning/entities"
 	"github.com/nikunjratanpara/cmms/provisioning/requests"
+	"github.com/nikunjratanpara/core"
 
 	repositories "github.com/nikunjratanpara/cmms/provisioning/repositories"
 )
@@ -32,7 +32,7 @@ func (service TenantService) Create(createRequest requests.TenantCreateRequest) 
 		Name:       createRequest.Name,
 		TenantId:   uuid.New(),
 		Deleted:    false,
-		Audit:      contract.NewAudit(createdBy, createdAt, createdBy, createdAt),
+		Audit:      core.NewAudit(createdBy, createdAt, createdBy, createdAt),
 	}
 	createdTenant, err := service.TenantRepository.Insert(tenant)
 	if err != nil {

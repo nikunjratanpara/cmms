@@ -4,7 +4,6 @@ import (
 	"net/http"
 
 	"github.com/go-chi/chi/v5"
-	"github.com/nikunjratanpara/cmms/internal/contract"
 	"github.com/nikunjratanpara/cmms/provisioning"
 )
 
